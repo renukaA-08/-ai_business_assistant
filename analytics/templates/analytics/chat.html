@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Intelligence Assistant</title>
+
+    {% load static %}
+    <link rel="stylesheet"
+          href="{% static 'analytics/css/chat.css' %}">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+            <div>
+                <h1>Business Intelligence Assistant</h1>
+                <p>Ask questions about your sales data</p>
+            </div>
+            <span class="status">● Online</span>
+        </header>
+
+        <main class="chat-container">
+
+            <div id="chat-messages" class="chat-messages">
+
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hello! I'm your Business Intelligence Assistant.
+
+                    </div>
+                </div>
+
+            </div>
+
+            <form id="chat-form" class="chat-form">
+
+                <input
+                    type="text"
+                    id="question-input"
+                    placeholder="Ask a business question..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="send-button">
+                    Send
+                </button>
+
+            </form>
+
+            <p class="footer-text">
+                Powered by Gemini AI and Django
+            </p>
+
+        </main>
+
+    </div>
+
+    <script src="{% static 'analytics/js/chat.js' %}"></script>
+
+</body>
+</html>
